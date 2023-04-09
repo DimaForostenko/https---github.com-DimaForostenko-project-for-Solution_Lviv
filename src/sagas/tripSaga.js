@@ -1,7 +1,7 @@
 import {put} from "redux-saga/effects";
-
 import * as tripActionCreators from "../actions/tripActionCreators";
-import * as API from "../api"
+import * as API from "../api";
+
 export function* getTripSaga(action){
  try{
   const {data:{data},} = yield API.getTrip();
@@ -16,6 +16,6 @@ export function* createTripSaga(action){
     const {data:{data},} = yield API.createTrip(action.payload.trip);
     yield put(tripActionCreators.createTripSuccess(data))
    }catch(error){
-   yield put(tripActionCreators.getTripError(error))
+   yield put(tripActionCreators.createTripError(error))
    }
 }
