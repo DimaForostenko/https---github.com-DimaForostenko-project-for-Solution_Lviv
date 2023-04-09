@@ -1,11 +1,10 @@
 import produce from "immer";
-import { DRAFT_STATE } from "immer/dist/internal";
 import ACTION_TYPES from "../actions";
 
 const initialState = {
   isFetching:false,
   error:null,
-  trip:[]
+  trips:[]
 }
 
 export default function tripReducer(state=initialState,action){
@@ -25,16 +24,18 @@ export default function tripReducer(state=initialState,action){
       })
     }
     case ACTION_TYPES.GET_TRIP_SUCCESS:{
-      const {payload:{trip}}=action
+      const {payload:{trips},}=action
       return produce(state, (draftState)=>{
         draftState.isFetching = false;
-        draftState.trip.push(...trip);
+        draftState.trips.push(...trips);
       })
     }
     case ACTION_TYPES.CREATE_TRIP_SUCCESS:{
+      const {payload:{trip},}=action;
       return produce(state, (draftState)=>{
-        draftState.isFetching = false
-      })}
+        draftState.isFetching = false;
+        draftState.trips.push(trip)
+      });}
     default:{
       return state;
     }
