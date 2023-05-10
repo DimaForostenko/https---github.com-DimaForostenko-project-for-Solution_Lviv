@@ -1,0 +1,96 @@
+
+section {
+  background-color: black;
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: 3rem;
+  
+  margin: 0;
+}
+
+p {
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem 0;
+  padding: 0.3rem 0 0.3rem 0;
+}
+
+li p {
+  color: yellow;
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+
+div{
+  display: flex;
+  flex-wrap: wrap;
+  
+}
+label{
+  
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  
+}
+input[type="text"]{  
+  background-color: whitesmoke;
+  color: black;
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+}
+input[type="datetime-local"]{
+  display: flex;
+  flex-direction: space-between;
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0; 
+}
+
+button[type="submit"] {
+  background-color: whitesmoke;
+  color: black;
+  font-size: 2rem;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.error {
+  color: red;
+  font-size: 1.5rem;
+  margin: 0.5rem 0;
+}
+
+
+
+
+
+
+

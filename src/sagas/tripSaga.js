@@ -19,3 +19,20 @@ export function* createTripSaga(action){
    yield put(tripActionCreators.createTripError(error))
    }
 }
+export function* updateTripSaga(action) {
+  try {
+    const { data:{data}, } = yield API.updateTrip(action.payload.trip);
+    yield put(tripActionCreators.updateTripSuccess(data));
+  } catch (error) {
+    yield put(tripActionCreators.updateTripError(error));
+  }
+}
+
+export function* deleteTripSaga(action) {
+  try {
+    const { data :{data},} = yield API.deleteTrip(action.payload.tripId);
+    yield put(tripActionCreators.deleteTripSuccess(data));
+  } catch (error) {
+    yield put(tripActionCreators.deleteTripError(error));
+  }
+}

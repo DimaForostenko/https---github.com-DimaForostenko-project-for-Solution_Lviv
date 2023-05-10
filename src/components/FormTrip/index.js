@@ -1,6 +1,6 @@
 import React from 'react';
 import { bindActionCreators } from 'redux';
-import { useSelector,useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import * as tripActionCreators from "../../actions/tripActionCreators"
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
